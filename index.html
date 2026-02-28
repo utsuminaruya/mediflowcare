@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediflow Care | 看護師付き添い・医療通訳・テスラ送迎サービス</title>
+  <meta name="description" content="現役看護師が通院・旅行に付き添い。ベトナム語医療通訳対応。テスラで快適送迎。関東圏内対応。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B5E20;
+      --primary-dark: #0D3D12;
+      --primary-light: #E8F5E9;
+      --accent: #C9A227;
+      --accent-light: #FFF8E1;
+      --navy: #1A237E;
+      --dark: #212121;
+      --gray: #616161;
+      --light-gray: #F5F5F5;
+      --white: #FFFFFF;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* ヘッダー */
+    header {
+      background: var(--white);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .logo span {
+      color: var(--accent);
+    }
+    
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .header-phone {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-accent {
+      background: var(--accent);
+      color: var(--white);
+    }
+    
+    .btn-accent:hover {
+      background: #B8911F;
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+    
+    .btn-white {
+      background: var(--white);
+      color: var(--navy);
+    }
+    
+    .btn-white:hover {
+      background: #F5F5F5;
+      transform: translateY(-2px);
+    }
+    
+    /* ヒーローセクション */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+      padding: 130px 0 80px;
+    }
+    
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+    
+    .hero-content {
+      flex: 1;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    
+    .hero h1 {
+      font-size: 36px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+    
+    .hero h1 span {
+      color: var(--primary);
+    }
+    
+    .hero-description {
+      font-size: 16px;
+      color: var(--gray);
+      margin-bottom: 30px;
+      line-height: 1.9;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .hero-image {
+      flex: 1;
+      position: relative;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    
+    .hero-image-badge {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 5px 20px rgba(27, 94, 32, 0.3);
+    }
+    
+    /* セクション共通 */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title h2 {
+      font-size: 30px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    
+    .section-title p {
+      font-size: 15px;
+      color: var(--gray);
+    }
+    
+    .section-title-vi {
+      font-size: 13px;
+      color: var(--accent);
+      font-style: italic;
+      margin-top: 5px;
+    }
+    
+    /* 課題セクション */
+    .problems {
+      background: var(--light-gray);
+    }
+    
+    .problem-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    
+    .problem-item {
+      background: var(--white);
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--primary);
+    }
+    
+    .problem-item h3 {
+      font-size: 16px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    
+    .problem-item p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    
+    /* サービスプラン */
+    .plans {
+      background: var(--white);
+    }
+    
+    .plan-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    
+    .plan-card {
+      border: 2px solid #E0E0E0;
+      border-radius: 20px;
+      padding: 35px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    
+    .plan-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    
+    .plan-card.featured {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--white);
+      font-size: 12px;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+    
+    .plan-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #E0E0E0;
+    }
+    
+    .plan-card h3 {
+      font-size: 24px;
+      color: var(--dark);
+      margin-bottom: 5px;
+    }
+    
+    .plan-card .plan-subtitle {
+      font-size: 14px;
+      color: var(--accent);
+    }
+    
+    .plan-card .plan-description {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .plan-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .plan-features li {
+      font-size: 14px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #E0E0E0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .plan-features li .check {
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 16px;
+    }
+    
+    .plan-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* スタッフ紹介 */
+    .staff {
+      background: var(--primary-light);
+    }
+    
+    .staff-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 30px;
+    }
+    
+    .staff-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .staff-card-inner {
+      display: flex;
+      gap: 25px;
+      padding: 30px;
+    }
+    
+    .staff-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 15px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .staff-photo-placeholder {
+      width: 140px;
+      height: 140px;
+      border-radius: 15px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .staff-photo-placeholder span {
+      font-size: 50px;
+      color: var(--white);
+    }
+    
+    .staff-info {
+      flex: 1;
+    }
+    
+    .staff-info h3 {
+      font-size: 18px;
+      color: var(--dark);
+      margin-bottom: 5px;
+    }
+    
+    .staff-info .staff-role {
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    
+    .staff-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .credential {
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 15px;
+      background: var(--light-gray);
+      color: var(--dark);
+      font-weight: 500;
+    }
+    
+    /* テスラセクション */
+    .tesla-section {
+      background: linear-gradient(145deg, #0D1B2A 0%, #1B3A5F 100%);
+      color: var(--white);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tesla-inner {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    
+    .tesla-content {
+      flex: 1;
+    }
+    
+    .tesla-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 11px;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    
+    .tesla-content h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .tesla-content .tesla-subtitle {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    
+    .tesla-content p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    
+    .tesla-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .tesla-feature {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 12px 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    
+    .tesla-feature .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      border-radius: 50%;
+      font-size: 12px;
+    }
+    
+    .tesla-visual {
+      flex: 1;
+    }
+    
+    .tesla-visual img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+    }
+    
+    .tesla-model-label {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .tesla-model-label .model {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    
+    .tesla-model-label .sub {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 5px;
+    }
+    
+    /* 対応エリア */
+    .area {
+      background: var(--white);
+    }
+    
+    .area-content {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .area-left h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    
+    .area-left p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .area-list {
+      font-size: 18px;
+      text-align: right;
+      line-height: 1.8;
+    }
+    
+    /* 予約セクション */
+    .booking {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
+      padding: 100px 0;
+    }
+    
+    .booking-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .booking h2 {
+      font-size: 30px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    
+    .booking-subtitle {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+    
+    .booking-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .booking-option {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 35px 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .booking-option:hover {
+      transform: translateY(-5px);
+    }
+    
+    .booking-option h3 {
+      font-size: 18px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    
+    .booking-option p {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    
+    .booking-note {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    
+    /* 問い合わせフォーム */
+    .contact-form {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .form-title {
+      font-size: 20px;
+      color: var(--dark);
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    
+    .form-group label .required {
+      color: #D32F2F;
+      margin-left: 5px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #E0E0E0;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    
+    .form-submit {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .form-submit .btn {
+      padding: 16px 60px;
+      font-size: 16px;
+    }
+    
+    /* フッター */
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 60px 0 30px;
+    }
+    
+    .footer-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-brand .logo {
+      color: var(--white);
+      margin-bottom: 15px;
+    }
+    
+    .footer-brand p {
+      font-size: 14px;
+      color: #BDBDBD;
+      line-height: 1.8;
+    }
+    
+    .footer-contact h4 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-contact-item {
+      font-size: 14px;
+      color: #BDBDBD;
+      margin-bottom: 12px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #424242;
+      font-size: 12px;
+      color: #757575;
+    }
+    
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 120px 0 60px;
+      }
+      
+      .hero-inner {
+        flex-direction: column;
+      }
+      
+      .hero h1 {
+        font-size: 26px;
+      }
+      
+      .hero-image img {
+        max-width: 100%;
+      }
+      
+      .header-phone {
+        display: none;
+      }
+      
+      .staff-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .staff-card-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .tesla-inner {
+        flex-direction: column;
+      }
+      
+      .tesla-visual img {
+        max-width: 100%;
+      }
+      
+      .area-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 35px;
+      }
+      
+      .area-list {
+        text-align: center;
+      }
+      
+      .booking-options {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .plan-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">Mediflow <span>Care</span></div>
+        <div class="header-contact">
+          <a href="tel:080-2671-5547" class="header-phone">TEL: 080-2671-5547</a>
+          <a href="#booking" class="btn btn-primary">無料相談予約</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">関東圏内対応 ・ ベトナム語対応</div>
+          <h1><span>看護師</span>が寄り添い、<br><span>医療通訳</span>がつなぐ。<br>安心の医療サポート。</h1>
+          <p class="hero-description">
+            現役看護師が通院・旅行に付き添い、医師の説明をわかりやすく解説。<br>
+            ベトナム語医療通訳にも対応。テスラで快適にお迎えします。
+          </p>
+          <div class="hero-cta">
+            <a href="#booking" class="btn btn-primary">無料相談を予約する</a>
+            <a href="#plans" class="btn btn-outline">サービス内容を見る</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/nurse.png" alt="現役看護師があなたに寄り添います">
+          <div class="hero-image-badge">看護師歴10年以上の経験</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 課題セクション -->
+  <section class="problems">
+    <div class="container">
+      <div class="section-title">
+        <h2>こんなお悩みはありませんか？</h2>
+        <p class="section-title-vi">Bạn có những lo lắng như thế này không?</p>
+      </div>
+      <div class="problem-list">
+        <div class="problem-item">
+          <h3>高齢の親の通院が心配</h3>
+          <p>一人で病院に行かせるのが不安。でも仕事で付き添えない。</p>
+        </div>
+        <div class="problem-item">
+          <h3>医師の説明がわからない</h3>
+          <p>専門用語が多くて理解できない。一緒に聞いてほしい。</p>
+        </div>
+        <div class="problem-item">
+          <h3>日本語での受診が不安</h3>
+          <p>母国語で症状を伝えたい。通訳してほしい。</p>
+        </div>
+        <div class="problem-item">
+          <h3>持病があるけど旅行したい</h3>
+          <p>体調が心配で旅行を諦めている。付き添いがいれば安心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- サービスプラン -->
+  <section class="plans" id="plans">
+    <div class="container">
+      <div class="section-title">
+        <h2>サービスプラン</h2>
+        <p>あなたに合ったプランをお選びください</p>
+        <p class="section-title-vi">Các gói dịch vụ</p>
+      </div>
+      <div class="plan-cards">
+        <!-- Personal -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Personal</h3>
+            <p class="plan-subtitle">パーソナル</p>
+          </div>
+          <p class="plan-description">看護師が通院・旅行に付き添い、医師の説明をわかりやすく解説します。</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span>通院付き添い・診察同行</li>
+            <li><span class="check">✓</span>医師の説明をわかりやすく解説</li>
+            <li><span class="check">✓</span>旅行・外出の付き添い</li>
+            <li><span class="check">✓</span>テスラで快適送迎</li>
+            <li><span class="check">✓</span>ご家族への報告書作成</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline">相談する</a>
+        </div>
+        
+        <!-- Premium -->
+        <div class="plan-card featured">
+          <div class="plan-badge">ベトナム語対応</div>
+          <div class="plan-header">
+            <h3>Premium</h3>
+            <p class="plan-subtitle">プレミアム / Cao cấp</p>
+          </div>
+          <p class="plan-description">看護師＋ベトナム語医療通訳のダブルサポート。安心の医療体験を。</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span>Personalの全サービス</li>
+            <li><span class="check">✓</span>ベトナム語医療通訳</li>
+            <li><span class="check">✓</span>医師の説明を母国語で通訳</li>
+            <li><span class="check">✓</span>処方・検査結果の説明</li>
+            <li><span class="check">✓</span>介護福祉士・看護師資格保持者が対応</li>
+          </ul>
+          <a href="#booking" class="btn btn-accent">相談する</a>
+        </div>
+        
+        <!-- Business -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Business</h3>
+            <p class="plan-subtitle">ビジネス（法人向け）</p>
+          </div>
+          <p class="plan-description">監理組合・企業様向け。外国人材の健康診断・通院をサポートします。</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span>健康診断同行・医療通訳</li>
+            <li><span class="check">✓</span>従業員の通院サポート</li>
+            <li><span class="check">✓</span>オンライン医療通訳</li>
+            <li><span class="check">✓</span>月額サポート契約対応</li>
+            <li><span class="check">✓</span>報告書・書類作成</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline">法人相談</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- スタッフ紹介 -->
+  <section class="staff">
+    <div class="container">
+      <div class="section-title">
+        <h2>担当スタッフ</h2>
+        <p>経験豊富な専門家がサポートします</p>
+        <p class="section-title-vi">Đội ngũ nhân viên chuyên nghiệp</p>
+      </div>
+      <div class="staff-cards">
+        <div class="staff-card">
+          <div class="staff-card-inner">
+            <img src="images/nurse.png" alt="現役看護師" class="staff-photo">
+            <div class="staff-info">
+              <h3>現役看護師</h3>
+              <p class="staff-role">Điều dưỡng viên</p>
+              <div class="staff-credentials">
+                <span class="credential">看護師歴10年以上</span>
+                <span class="credential">病院</span>
+                <span class="credential">特養</span>
+                <span class="credential">老健</span>
+                <span class="credential">訪問入浴</span>
+                <span class="credential">ツアーナース</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="staff-card-inner">
+            <img src="images/interpreter.jpg" alt="ベトナム語医療通訳" class="staff-photo">
+            <div class="staff-info">
+              <h3>ベトナム語医療通訳</h3>
+              <p class="staff-role">Phiên dịch viên y tế</p>
+              <div class="staff-credentials">
+                <span class="credential">介護福祉士（国家資格）</span>
+                <span class="credential">日本語能力N1</span>
+                <span class="credential">医療現場経験</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- テスラセクション -->
+  <section class="tesla-section">
+    <div class="container">
+      <div class="tesla-inner">
+        <div class="tesla-content">
+          <div class="tesla-badge">PREMIUM TRANSFER</div>
+          <h2>テスラで快適にお迎え</h2>
+          <p class="tesla-subtitle">Đón tiếp thoải mái bằng xe Tesla</p>
+          <p>静粛性に優れたテスラで、ご自宅から病院まで快適に移動。乗り降りしやすく、体への負担を最小限に抑えます。</p>
+          <div class="tesla-features-grid">
+            <div class="tesla-feature">
+              <span class="icon">◎</span>驚くほど静かな車内
+            </div>
+            <div class="tesla-feature">
+              <span class="icon">◎</span>全席シートヒーター完備
+            </div>
+            <div class="tesla-feature">
+              <span class="icon">◎</span>乗り降りしやすい設計
+            </div>
+            <div class="tesla-feature">
+              <span class="icon">◎</span>広々とした車内空間
+            </div>
+          </div>
+        </div>
+        <div class="tesla-visual">
+          <img src="images/tesla.png" alt="Tesla Model 3 Long Range">
+          <div class="tesla-model-label">
+            <div class="model">TESLA MODEL 3</div>
+            <div class="sub">LONG RANGE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 対応エリア -->
+  <section class="area">
+    <div class="container">
+      <div class="area-content">
+        <div class="area-left">
+          <h3>対応エリア</h3>
+          <p>関東圏内どこでもお伺いします / Phục vụ toàn vùng Kanto</p>
+        </div>
+        <div class="area-list">
+          東京 ／ 神奈川 ／ 千葉 ／ 埼玉
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 予約セクション -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <div class="booking-inner">
+        <h2>無料相談・ご予約</h2>
+        <p class="booking-subtitle">まずはお気軽にご相談ください。ご要望をお聞きし、最適なプランをご提案します。</p>
+        
+        <div class="booking-options">
+          <div class="booking-option">
+            <h3>お電話で相談</h3>
+            <p>すぐに相談したい方はお電話ください</p>
+            <a href="tel:080-2671-5547" class="btn btn-primary">080-2671-5547</a>
+          </div>
+          <div class="booking-option">
+            <h3>LINEで相談</h3>
+            <p>LINEでお気軽にメッセージください</p>
+            <a href="https://lin.ee/xUocVyI" class="btn btn-accent" target="_blank">LINEで相談する</a>
+          </div>
+        </div>
+        
+        <p class="booking-note">受付時間：9:00〜18:00（土日祝も対応可）</p>
+        
+        <!-- 問い合わせフォーム -->
+        <div class="contact-form">
+          <h3 class="form-title">お問い合わせフォーム</h3>
+          <form action="https://formspree.io/f/xzdawolq" method="POST">
+            <input type="hidden" name="_subject" value="【Mediflow Care】お問い合わせ">
+            <input type="hidden" name="_next" value="https://mediflow-care.netlify.app/?thanks=true">
+            <div class="form-row">
+              <div class="form-group">
+                <label>お名前 <span class="required">*</span></label>
+                <input type="text" name="name" required placeholder="例：山田 太郎">
+              </div>
+              <div class="form-group">
+                <label>電話番号 <span class="required">*</span></label>
+                <input type="tel" name="phone" required placeholder="例：080-1234-5678">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス</label>
+              <input type="email" name="email" placeholder="例：example@email.com">
+            </div>
+            <div class="form-group">
+              <label>ご希望のプラン</label>
+              <select name="plan">
+                <option value="">選択してください</option>
+                <option value="personal">Personal（看護師付き添い）</option>
+                <option value="premium">Premium（看護師＋医療通訳）</option>
+                <option value="business">Business（法人向け）</option>
+                <option value="undecided">まだ決めていない</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>ご相談内容 <span class="required">*</span></label>
+              <textarea name="message" required placeholder="ご要望やご質問をお聞かせください。&#10;例：母の通院に付き添ってほしい、健康診断の通訳をお願いしたい等"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">送信する</button>
+            </div>
+          </form>
+          <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #888;">
+            ※ 送信後、担当者より24時間以内にご連絡いたします
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">Mediflow <span>Care</span></div>
+          <p>現役看護師が寄り添い、医療通訳がつなぐ。<br>安心の医療サポートサービス。</p>
+        </div>
+        <div class="footer-contact">
+          <h4>お問い合わせ</h4>
+          <div class="footer-contact-item">TEL: 080-2671-5547</div>
+          <div class="footer-contact-item">FAX: 050-6883-9629</div>
+          <div class="footer-contact-item">Mail: info@mediflow.jp</div>
+          <div class="footer-contact-item">神奈川県相模原市緑区城山1-5-1</div>
+        </div>
+        <div class="footer-contact">
+          <h4>運営会社</h4>
+          <div class="footer-contact-item">Mediflow 株式会社</div>
+          <div class="footer-contact-item">有料職業紹介事業許可</div>
+          <div class="footer-contact-item">登録支援機関</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Mediflow株式会社 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- スムーススクロール -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
